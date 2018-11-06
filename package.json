@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@aurelia-ux/components": "^0.11.1",
-    "@aurelia-ux/core": "^0.11.1",
-    "@aurelia-ux/icons": "^0.11.1",
+    "@aurelia-ux/components": "^0.12.0",
+    "@aurelia-ux/core": "^0.12.0",
+    "@aurelia-ux/icons": "^0.12.0",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-binding": "^2.1.5",
     "aurelia-bootstrapper": "^2.3.0",
