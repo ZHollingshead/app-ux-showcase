@@ -17,6 +17,22 @@
         The <code>ux-radio</code> allows the user to select one option from a set.
       </p>
 
+      <div class="form-row">
+        <ux-radio></ux-radio>
+        <label>Unchecked</label>
+      </div>
+      <div class="form-row">
+        <ux-radio checked></ux-radio>
+        <label>Checked</label>
+      </div>
+      <div class="form-row">
+        <ux-radio disabled></ux-radio>
+        <label>Disabled</label>
+      </div>
+      <div class="form-row">
+        <ux-radio disabled checked="true"></ux-radio>
+        <label>Disabled Checked</label>
+    </div>
     </ux-grid-cell>
 
     <ux-grid-cell sm="6" lg="4">
@@ -50,12 +66,12 @@
           <div>
             <ux-form>
 
-              <template repeat.for="product of productObjects">
-                <div class="form-row">
-                  <ux-radio model.bind="product" checked.bind="selectedProductObjects"></ux-radio>
-                  <label>${product.id} - ${product.name}</label>
-                </div>
-              </template>
+                <template repeat.for="product of productObjects">
+                  <div class="form-row">
+                    <ux-radio model.bind="product" checked.bind="selectedProductObjects"></ux-radio>
+                    <label>${product.id} - ${product.name}</label>
+                  </div>
+                </template>
 
             </ux-form>
           </div>

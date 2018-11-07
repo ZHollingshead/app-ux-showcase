@@ -18,9 +18,11 @@ export let routes = [
   { settings: { category: formComponents }, route: 'buttons', moduleId: PLATFORM.moduleName('routes/components/buttons'), name: 'buttons', title: 'Buttons', nav: true },
   { settings: { category: formComponents }, route: 'checkbox', moduleId: PLATFORM.moduleName('routes/components/checkbox'), name: 'checkbox', title: 'Checkbox', nav: true },
   { settings: { category: formComponents }, route: 'chips', moduleId: PLATFORM.moduleName('routes/components/chips'), name: 'chips', title: 'Chips', nav: true },
+  { settings: { category: formComponents }, route: 'datepicker', moduleId: PLATFORM.moduleName('routes/components/datepicker'), name: 'datepicker', title: 'Datepicker', nav: true },
   { settings: { category: formComponents }, route: 'forms', moduleId: PLATFORM.moduleName('routes/components/forms'), name: 'forms', title: 'Forms', nav: true },
   { settings: { category: formComponents }, route: 'icons', moduleId: PLATFORM.moduleName('routes/components/icons'), name: 'icons', title: 'Icons', nav: true },
   { settings: { category: formComponents }, route: 'inputs', moduleId: PLATFORM.moduleName('routes/components/inputs'), name: 'inputs', title: 'Inputs', nav: true },
+  { settings: { category: formComponents }, route: 'radio', moduleId: PLATFORM.moduleName('routes/components/radio'), name: 'radio', title: 'Radio', nav: true },
   { settings: { category: formComponents }, route: 'switch', moduleId: PLATFORM.moduleName('routes/components/switch'), name: 'switch', title: 'Switch', nav: true },
   { settings: { category: formComponents }, route: 'textarea', moduleId: PLATFORM.moduleName('routes/components/textarea'), name: 'textarea', title: 'Textarea', nav: true }
 ];

@@ -1,4 +1,4 @@
-export class Checkbox {
+export class Radio {
   public products = ['Motherboard', 'CPU', 'Memory'];
   public productObjects: IProduct[] = [
       { id: 0, name: 'Motherboard' },
@@ -10,7 +10,7 @@ export class Checkbox {
   productMatcher = (a, b) => a.id === b.id;
 
   selectedStringProducts: string[] = [];
-  selectedProductObjects: IProduct[] = [];
+  selectedProductObjects: IProduct = { id: 2, name: 'Memory' };
 
   public alerter(type: string) {
       alert('event from ' + type);
