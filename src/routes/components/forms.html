@@ -1,5 +1,5 @@
 <template>
-  
+
   <ux-grid fluid>
     <ux-grid-cell sm="6" lg="8">
       <h1 class="section-title">
@@ -39,9 +39,18 @@
 
       <h2>Usage</h2>
 
-      <code-block>
-        &lt;ux-form&gt; &lt;div class="form-row"&gt; &lt;ux-field label="First Name"&gt;&lt;/ux-field&gt; &lt;ux-field label="First
-        Name"&gt;&lt;/ux-field&gt; &lt;/div&gt; &lt;ux-field label="Email Address"&gt;&lt;/ux-field&gt; &lt;ux-field label="Biography"&gt;&lt;/ux-field&gt;
+      <code-block type="html">
+        &lt;ux-form&gt;
+          &lt;div class="form-row"&gt;
+            &lt;ux-field label="First Name"&gt;
+            &lt;/ux-field&gt;
+            &lt;ux-field label="First Name"&gt;
+            &lt;/ux-field&gt;
+          &lt;/div&gt;
+          &lt;ux-field label="Email Address"&gt;
+          &lt;/ux-field&gt;
+          &lt;ux-field label="Biography"&gt;
+          &lt;/ux-field&gt;
         &lt;/ux-form&gt;
       </code-block>
     </ux-grid-cell>
@@ -53,28 +62,30 @@
 
             <div class="form-row">
 
-              <ux-field label="First Name">
-                <ux-input maxlength="10" value.bind="firstName & validate"></ux-input>
+              <ux-field>
+                <ux-input placeholder="First Name" maxlength="10" value.bind="firstName & validate"></ux-input>
                 <ux-input-info ux-input-counter>John</ux-input-info>
               </ux-field>
 
-              <ux-field label="Last Name">
-                <ux-input maxlength="10" value.bind="lastName & validate"></ux-input>
+              <ux-field>
+                <ux-input placeholder="Last Name" maxlength="10" value.bind="lastName & validate"></ux-input>
                 <ux-input-info ux-input-counter>Doe</ux-input-info>
               </ux-field>
 
             </div>
 
-            <ux-field label="Email Address">
-              <ux-input type="email" value.bind="email & validate"></ux-input>
+            <ux-field>
+              <ux-input placeholder="Email Address" type="email" value.bind="email & validate"></ux-input>
               <ux-input-info>email@example.com</ux-input-info>
             </ux-field>
 
-            <ux-field label="Biography">
-              <ux-textarea auto-resize></ux-textarea>
+            <ux-field>
+              <ux-textarea placeholder="Biography" auto-resize></ux-textarea>
             </ux-field>
 
-            <ux-button click.delegate="submit()">Submit</ux-button>
+            <ux-field>
+              <ux-button click.delegate="submit()">Submit</ux-button>
+            </ux-field>
 
           </ux-form>
 

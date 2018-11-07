@@ -6,7 +6,10 @@
       "controlBackground": "#fff",
       "controlForeground": "#212121",
       "appBackground": "#fafafa",
-      "appForeground": "#212121"
+      "appForeground": "#212121",
+      "primary": "#9C27B0",
+      "primaryDark": "#6A1B9A",
+      "primaryLight": "#BA68C8"
     }, {
     "themeKey": "toolbar",
 
@@ -30,7 +33,10 @@
       "controlBackground": "#373740",
       "controlForeground": "#fff",
       "appBackground": "#33333d",
-      "appForeground": "#fff"
+      "appForeground": "#fff",
+      "primary": "#AB47BC",
+      "primaryDark": "#8E24AA",
+      "primaryLight": "#CE93D8"
     }, {
     "themeKey": "toolbar",
 

@@ -31,7 +31,9 @@
 
       <br>
 
-      <ux-tag>Raised (default)</ux-tag>
+
+
+      <ux-tag tabindex="0">Raised (default)</ux-tag>
       <ux-tag>Flat</ux-tag>
       <ux-tag>Outline</ux-tag>
       <ux-tag>Text</ux-tag>
@@ -69,31 +71,28 @@
           </template>
         </div>
         <ux-card-content>
-          <ux-form>
-            <label>Button Type</label>
-            <div class="form-row">
-              
-              <ux-radio id="type-raised" model.bind="'raised'" checked.bind="buttontype"></ux-radio>
-              <label for="type-raised">Raised</label>
-              <ux-radio id="type-flat" model.bind="'flat'" checked.bind="buttontype"></ux-radio>
-              <label for="type-flat">Flat</label>
-              <ux-radio id="type-flat" model.bind="'text'" checked.bind="buttontype"></ux-radio>
-              <label for="type-flat">Text</label>
-              <ux-radio id="type-flat" model.bind="'outline'" checked.bind="buttontype"></ux-radio>
-              <label for="type-flat">Outline</label>
-              <ux-radio id="type-fab" model.bind="'fab'" checked.bind="buttontype"></ux-radio>
-              <label for="type-fab">Fab</label>
-            </div>
-            <label>Button Size</label>
-            <div class="form-row">
-              <ux-radio id="size-small" model.bind="'small'" checked.bind="buttonsize"></ux-radio>
-              <label for="size-small">Small</label>
-              <ux-radio id="size-medium" model.bind="'medium'" checked.bind="buttonsize"></ux-radio>
-              <label for="size-medium">Medium</label>
-              <ux-radio id="size-large" model.bind="'large'" checked.bind="buttonsize"></ux-radio>
-              <label for="size-large">Large</label>
-            </div>
-          </ux-form>
+          <label>Button Type</label>
+          <div class="select-row">
+            <ux-radio id="type-raised" name="type" model.bind="'raised'" checked.bind="buttontype"></ux-radio>
+            <label for="type-raised">Raised</label>
+            <ux-radio id="type-flat" name="type" model.bind="'flat'" checked.bind="buttontype"></ux-radio>
+            <label for="type-flat">Flat</label>
+            <ux-radio id="type-text" name="type" model.bind="'text'" checked.bind="buttontype"></ux-radio>
+            <label for="type-text">Text</label>
+            <ux-radio id="type-outline" name="type" model.bind="'outline'" checked.bind="buttontype"></ux-radio>
+            <label for="type-outline">Outline</label>
+            <ux-radio id="type-fab" name="type" model.bind="'fab'" checked.bind="buttontype"></ux-radio>
+            <label for="type-fab">Fab</label>
+          </div>
+          <label>Button Size</label>
+          <div class="select-row">
+            <ux-radio id="size-small" name="size" model.bind="'small'" checked.bind="buttonsize"></ux-radio>
+            <label for="size-small">Small</label>
+            <ux-radio id="size-medium" name="size" model.bind="'medium'" checked.bind="buttonsize"></ux-radio>
+            <label for="size-medium">Medium</label>
+            <ux-radio id="size-large" name="size" model.bind="'large'" checked.bind="buttonsize"></ux-radio>
+            <label for="size-large">Large</label>
+          </div>
         </ux-card-content>
       </ux-card>
     </ux-grid-cell>

@@ -24,7 +24,7 @@ export class AureliaUXFormRenderer {
       return;
     }
 
-    element.classList.add('has-error');
+    element.classList.add('ux-input--has-error');
 
     const uxField = element.closest('ux-field');
     if (!uxField) {
@@ -38,7 +38,7 @@ export class AureliaUXFormRenderer {
 
     // add help-block
     const message = document.createElement('span');
-    message.className = 'error-text';
+    message.className = 'ux-input-info__error-text';
     message.textContent = result.message;
     message.id = `validation-message-${result.id}`;
     inputInfoHintText.insertBefore(message, inputInfoHintText.firstChild);
@@ -49,7 +49,7 @@ export class AureliaUXFormRenderer {
       return;
     }
 
-    element.classList.remove('has-error');
+    element.classList.remove('ux-input--has-error');
     
     
     const uxField = element.closest('ux-field');
@@ -67,9 +67,9 @@ export class AureliaUXFormRenderer {
     if (message) {
       inputInfoHintText.removeChild(message);
 
-      // remove the has-error class from the enclosing form-group div
+      // remove the ux-input--has-error class from the enclosing form-group div
       if (inputInfoHintText.querySelectorAll('.help-block.validation-message').length === 0) {
-        inputInfoHintText.classList.remove('has-error');
+        inputInfoHintText.classList.remove('ux-input--has-error');
       }
     }
   }
