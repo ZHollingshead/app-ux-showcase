@@ -1,0 +1,50 @@
+<template>
+  <require from="./swatch-group"></require>
+
+  <ux-grid fluid>
+    <ux-grid-cell>
+      <h2>Using Swatches</h2>
+
+      <p>
+        Swatches provide sets of colors, both primaries and accents, based on the color theory behind Material Design. It is recommended
+        that you select one primary and one accent color for your app, each with a normal, light and dark shade.
+      </p>
+
+      <p>
+        The swatches are all exposed in two ways. One is through the
+        <code>swatches</code> export on
+        <code>@aurelia-ux/core</code>. The other is through CSS Variables that are created and injected into the document when the
+        application starts up.
+      </p>
+    </ux-grid-cell>
+
+    <ux-grid-cell sm="6">
+
+      <strong>CSS Examples</strong>
+      <em>--ux-swatch--color-value</em>
+      <code-block type="css">
+        .my-component {
+          background-color: var(--ux-swatch--blue-grey-p500, #607D8B);
+        }
+      </code-block>
+    </ux-grid-cell>
+
+    <ux-grid-cell sm="6">
+      <strong>Javascript Example</strong>
+      <em>swatches.color.value</em>
+      <code-block type="javascript">
+        import { swatches } from '@aurelia-ux/core';
+
+        myComponent.style.backgroundColor = swatches.blueGrey.p50
+      </code-block>
+    </ux-grid-cell>
+
+    <ux-grid-cell>
+      <h2>Swatch List</h2>
+    </ux-grid-cell>
+
+    <ux-grid-cell xs="12" sm="6" md="4" lg="3" xl="2" repeat.for="swatch of swatches">
+      <swatch-group value.bind="swatch"></swatch-group>
+    </ux-grid-cell>
+  </ux-grid>
+</template>

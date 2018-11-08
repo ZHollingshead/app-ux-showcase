@@ -9,8 +9,10 @@ let layoutComponents = 'Layout Components';
 export let routes = [
   { route: '', redirect: 'getting-started' },
 
-  { settings: { category: coreFeatures, icon: 'settings' }, route: 'getting-started', moduleId: PLATFORM.moduleName('routes/getting-started'), name: 'gettingstarted', title: 'Getting Started', nav: true },
-  { settings: { category: coreFeatures, icon: 'format_paint' }, route: 'theming', moduleId: PLATFORM.moduleName('routes/theming/theming'), name: 'theming', title: 'Theming', nav: true },
+  { settings: { category: coreFeatures }, route: 'getting-started', moduleId: PLATFORM.moduleName('routes/getting-started'), name: 'gettingstarted', title: 'Getting Started', nav: true },
+  { settings: { category: coreFeatures }, route: 'theming', moduleId: PLATFORM.moduleName('routes/theming/theming'), name: 'theming', title: 'Theming', nav: true },
+  { settings: { category: coreFeatures }, route: 'swatches', moduleId: PLATFORM.moduleName('routes/theming/swatches'), name: 'swatches', title: 'Swatches', nav: true },
+
   { settings: { category: layoutComponents }, route: 'cards', moduleId: PLATFORM.moduleName('routes/components/cards'), name: 'cards', title: 'Cards', nav: true },
   { settings: { category: layoutComponents }, route: 'grid', moduleId: PLATFORM.moduleName('routes/components/grid'), name: 'grid', title: 'Grid', nav: true },
   { settings: { category: layoutComponents }, route: 'list', moduleId: PLATFORM.moduleName('routes/components/list'), name: 'list', title: 'List', nav: true },
