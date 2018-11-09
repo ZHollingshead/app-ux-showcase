@@ -14,6 +14,8 @@ export class Radio {
 
   public alerter(type: string) {
       alert('event from ' + type);
+
+      const radio: HTMLElement = {} as any;
   }
 }
 

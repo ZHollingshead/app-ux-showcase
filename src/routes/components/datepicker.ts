@@ -12,8 +12,4 @@ export class Datepicker {
       { month: 1, day: 14, year: 2019 }
     ]
   }};
-
-  public alert(input: string) {
-    alert(input);
-  }
 }

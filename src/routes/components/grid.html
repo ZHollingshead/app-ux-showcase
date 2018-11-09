@@ -1,7 +1,7 @@
 <template>
   <require from="./grid.css"></require>
 
-  <ux-grid fluid>
+  <ux-grid>
     <ux-grid-cell>
       <h1 class="section-title">
         &lt;ux-grid&gt;&lt;/ux-grid&gt;
@@ -219,7 +219,7 @@
     </ux-grid-cell>
 
     <ux-grid-cell>
-      <ux-grid fluid class="demo-grid">
+      <ux-grid class="demo-grid">
         <ux-grid-cell xs="6">
           .cell[xs="6"]
         </ux-grid-cell>
@@ -256,7 +256,7 @@
         </ux-grid-cell>
 
         <ux-grid-cell xs="12">
-          <ux-grid fluid>
+          <ux-grid>
             <ux-grid-cell xs="12">
               .cell[xs="12"]
             </ux-grid-cell>
@@ -269,10 +269,10 @@
           </ux-grid>
         </ux-grid-cell>
         <ux-grid-cell xs="12">
-          Subgrid with .remove-padding class applied to remove all padding from around the columns.
+          Subgrid with .ux-grid--remove-padding class applied to remove all padding from around the columns.
         </ux-grid-cell>
         <ux-grid-cell xs="12">
-          <ux-grid fluid class="remove-padding">
+          <ux-grid class="ux-grid--remove-padding">
             <ux-grid-cell xs="3">
               .cell[xs="3"]
             </ux-grid-cell>
@@ -301,7 +301,7 @@
 
     <ux-grid-cell>
       <strong>Two Grids Next To Eachother</strong>
-      <ux-grid fluid class="demo-grid">
+      <ux-grid class="demo-grid">
         <ux-grid-cell xs="6">
           .cell[xs="6"]
         </ux-grid-cell>
@@ -309,7 +309,7 @@
           .cell[xs="6"]
         </ux-grid-cell>
       </ux-grid>
-      <ux-grid fluid class="demo-grid">
+      <ux-grid class="demo-grid">
         <ux-grid-cell xs="6">
           .cell[xs="6"]
         </ux-grid-cell>
@@ -346,7 +346,7 @@
         &lt;/ux-grid&gt;
       </code-block>
 
-      <ux-grid fluid class="demo-grid">
+      <ux-grid class="demo-grid">
         <ux-grid-cell order-md="1" md="6">
           order-md="1"
         </ux-grid-cell>
@@ -404,18 +404,18 @@
       </p>
 
       <code-block type="html">
-        &lt;ux-grid fluid align-cells-middle&gt;
+        &lt;ux-grid align-cells-middle&gt;
           &lt;ux-grid-cell sm="3" style="min-height: 480px;"&gt;
             .cell[sm="3"] height: 480px;
           &lt;/ux-grid-cell&gt;
-          &lt;ux-grid-cell class="cell align-self-top" sm="2" style="min-height: 240px;"&gt;
+          &lt;ux-grid-cell class="ux-grid-cell--align-self-top" sm="2" style="min-height: 240px;"&gt;
             .cell[sm="2"] align-self-top
           &lt;/ux-grid-cell&gt;
-          &lt;ux-grid-cell class="cell align-self-middle" sm="2" style="min-height: 240px;"&gt;
-            .cell[sm="2"] align-self-middle
-          &lt;/ux-grid-cell&gt;
-          &lt;ux-grid-cell class="cell align-self-bottom" sm="2" style="min-height: 240px;"&gt;
+          &lt;ux-grid-cell class="ux-grid-cell--align-self-bottom" sm="2" style="min-height: 240px;"&gt;
             .cell[sm="2"] align-self-bottom
+          &lt;/ux-grid-cell&gt;
+          &lt;ux-grid-cell align-self-middle sm="2" style="min-height: 240px;"&gt;
+            .cell[sm="2"] align-self-middle
           &lt;/ux-grid-cell&gt;
           &lt;ux-grid-cell align-self-stretch sm="3" style="min-height: 240px;"&gt;
             .cell[sm="3"] align-self-stretch
@@ -426,14 +426,14 @@
         <ux-grid-cell sm="3" style="min-height: 480px;">
           .cell[sm="3"] height: 480px;
         </ux-grid-cell>
-        <ux-grid-cell class="cell align-self-top" sm="2" style="min-height: 240px;">
+        <ux-grid-cell class="ux-grid-cell--align-self-top" sm="2" style="min-height: 240px;">
           .cell[sm="2"] align-self-top
         </ux-grid-cell>
-        <ux-grid-cell class="cell align-self-middle" sm="2" style="min-height: 240px;">
-          .cell[sm="2"] align-self-middle
-        </ux-grid-cell>
-        <ux-grid-cell class="cell align-self-bottom" sm="2" style="min-height: 240px;">
+        <ux-grid-cell class="ux-grid-cell--align-self-bottom" sm="2" style="min-height: 240px;">
           .cell[sm="2"] align-self-bottom
+        </ux-grid-cell>
+        <ux-grid-cell align-self-middle sm="2" style="min-height: 240px;">
+          .cell[sm="2"] align-self-middle
         </ux-grid-cell>
         <ux-grid-cell align-self-stretch sm="3" style="min-height: 240px;">
           .cell[sm="3"] align-self-stretch
