@@ -1,0 +1,138 @@
+<template>
+  <ux-grid fluid>
+    <ux-grid-cell sm="6" lg="8">
+      <h1 class="section-title">
+        &lt;ux-datepicker&gt;&lt;/ux-datepicker&gt;
+      </h1>
+
+      <p>
+        <strong>Package:</strong> @aurelia-ux/datepicker
+      </p>
+
+      <p>
+        <strong>Also in:</strong> @aurelia-ux/components
+      </p>
+
+      <p>
+        The <code>ux-datepicker</code> allows the user to select one option from a set.
+      </p>
+
+      <h2>Using the Datepicker</h2>
+
+    </ux-grid-cell>
+
+    <ux-grid-cell sm="6" lg="4">
+      <ux-card>
+        <div class="component-demo">
+          <ux-datepicker aria-placeholder="test"></ux-datepicker>
+        </div>
+      </ux-card>
+
+    </ux-grid-cell>
+
+
+    <ux-grid-cell sm="7">
+      <h3>Setting a Minimum & Maximum Date</h3>
+
+      <p>
+        The calendar can be restricted to a range of values using the
+        <code>min-date</code> and <code>max-date</code> attributes.
+      </p>
+    </ux-grid-cell>
+
+    <ux-card sm="7">
+      <div class="component-demo">
+        <ux-datepicker type="date" min-date.bind="today"></ux-datepicker>
+      </div>
+      <code-block type="html">
+        &lt;ux-datepicker min-date.bind="today"&gt;&lt;/ux-datepicker&gt;
+      </code-block>
+    </ux-card>
+
+    <ux-card sm="7">
+      <div class="component-demo">
+        <ux-datepicker type="date" max-date.bind="today"></ux-datepicker>
+      </div>
+      <code-block type="html">
+        &lt;ux-datepicker max-date.bind="today"&gt;&lt;/ux-datepicker&gt;
+      </code-block>
+    </ux-card>
+
+    <ux-grid-cell sm="7">
+      <h3>Creating a Start and End Date Input</h3>
+
+      <p>
+        A very common requirement for datepickers is to be able to select a range of dates.
+        This can be accomplished by combining the <code>min-date</code> and
+        <code>max-date</code> attributes. Simply bind the <code>min-date</code> of your
+        end date field to the value of your start date field, and bind the
+        <code>max-date</code> property of your your start date field to the value of your
+        end date field.
+      </p>
+    </ux-grid-cell>
+
+    <ux-card sm="7">
+      <div class="component-demo">
+        <ux-datepicker placeholder="Start Date" type="date" value.bind="startDate" max-date.bind="endDate"></ux-datepicker>
+      </div>
+      <div class="component-demo">
+        <ux-datepicker placeholder="End Date" type="date" value.bind="endDate" min-date.bind="startDate"></ux-datepicker>
+      </div>
+      <code-block type="html">
+          &lt;ux-datepicke placeholder="Start Date" type="date" value.bind="startDate" max-date.bind="endDate"&gt;
+          &lt;/ux-datepicker&gt;
+          &lt;ux-datepicker placeholder="End Date" type="date" value.bind="endDate" min-date.bind="startDate"&gt;
+          &lt;/ux-datepicker&gt;
+      </code-block>
+    </ux-card>
+
+    <ux-grid-cell sm="7">
+      <h3>Disable Days</h3>
+
+      <p>
+        There are instances where you want to disable certain days on the calendar. These
+        can be hollidays, weekends, or other dates. This can easily be accomplished by
+        binding to the datepickers <code>config</code> parameter.
+      </p>
+
+      <p>
+        You can disable a day of the week, such as weekends, by setting <code>weekday</code>.
+        You can also disabled days by any combination of <code>day</code>,
+        <code>month</code>, and <code>year</code>. When month is not present, the calendar
+        will fill this value with the current month, doing the same with year.
+      </p>
+    </ux-grid-cell>
+
+    <ux-card sm="7">
+      <div class="component-demo">
+        <ux-datepicker config.bind="disabledDaysConfig"></ux-datepicker>
+      </div>
+      <label>Javascript</label>
+      <code-block type="javascript">
+        export class FormPage {
+          constructor() {
+            this.disabledDaysConfig = {
+              calendarSettings: {
+                disableDays: [
+                  { weekday: 0 },
+                  { weekday: 6 },
+                  { day: 1 },
+                  { day: 2 },
+                  { day: 3 },
+                  { month: 12, day: 25 },
+                  { month: 1, day: 14, year: 2019 }
+                ]
+              }
+            };
+          }
+        }
+      </code-block>
+      <label>HTML</label>
+      <code-block type="html">
+        &lt;ux-datepicker config.bind="disabledDaysConfig"&gt;&lt;/ux-datepicker&gt;
+      </code-block>
+    </ux-card>
+
+  </ux-grid>
+
+</template>
